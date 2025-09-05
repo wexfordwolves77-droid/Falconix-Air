@@ -31,4 +31,17 @@ Website updates, branding, and route previews coming soon.
 
 ---
 
+## Pages-
+<a href="aircraft-piper-navajo.md">
+  <button style="padding:10px 20px; background-color:#00aa88; color:white; border:none; border-radius:5px; cursor:pointer;">
+    ✈️ Explore Our Fleet
+  </button>
+</a>
+<a href="investments.md">
+  <button style="padding:10px 20px; background-color:#0055ff; color:white; border:none; border-radius:5px; cursor:pointer;">
+    💼 View Investment Opportunities
+  </button>
+</a>
+
+
 © 2025 Falconix Air. All rights reserved.
