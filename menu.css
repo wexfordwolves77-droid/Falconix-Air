@@ -1,0 +1,64 @@
+/* General Section Styling */
+#menu {
+  background: linear-gradient(to right, #fefcea, #f1da36);
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+#menu h2 {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.menu-category h3 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #e67e22;
+  border-bottom: 2px solid #f39c12;
+  padding-bottom: 5px;
+}
+
+/* Menu Items */
+.menu-category ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu-category li {
+  font-size: 1.1em;
+  margin: 10px 0;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.7);
+  border-left: 4px solid #f39c12;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.menu-category li:hover {
+  background: #fff8e1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #menu {
+    padding: 20px;
+  }
+
+  #menu h2 {
+    font-size: 2em;
+  }
+
+  .menu-category h3 {
+    font-size: 1.3em;
+  }
+
+  .menu-category li {
+    font-size: 1em;
+  }
+}
