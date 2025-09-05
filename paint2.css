@@ -1,0 +1,14 @@
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+.aircraft-card {
+  display: grid;
+  grid-template-rows: 200px auto 1fr;
+  transition: transform 0.4s;
+}
+.aircraft-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(0,156,255,0.2);
+}
