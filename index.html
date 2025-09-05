@@ -1,0 +1,572 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Falconix Air | Futuristic Part 135 Charter Airline</title>
+  <meta name="description" content="Falconix Air – Leading the Future of Charter Aviation. Fleet technology, elite service, investor confidence. Launching 2035.">
+  <link rel="preload" as="image" href="Falcoxn.png">
+  <style>
+    /* ===== Falconix Air Advanced CSS Framework ===== */
+
+    :root {
+      --primary: #005eff;
+      --primary-dark: #012340;
+      --accent: #00e0ff;
+      --white: #fff;
+      --black: #151923;
+      --silver: #c5cbd6;
+      --font-main: 'Inter', 'Segoe UI', Arial, sans-serif;
+      --font-headline: 'Orbitron', 'Inter', sans-serif;
+      --radius: 0.75rem;
+      --transition: cubic-bezier(0.23,1,0.32,1);
+      --max-width: 1300px;
+      --hero-overlay: linear-gradient(120deg, rgba(1,35,64,.91) 33%, rgba(0,224,255,0.09) 110%);
+    }
+
+    html { scroll-behavior: smooth; background: var(--black);}
+    body {
+      font-family: var(--font-main);
+      color: var(--white);
+      background: var(--black);
+      margin: 0;
+      min-height: 100vh;
+      letter-spacing: 0.02em;
+    }
+    /* --- Header and Nav --- */
+    header {
+      background: var(--primary-dark);
+      position: sticky;
+      top: 0; z-index: 999;
+      box-shadow: 0 2px 16px 0 rgba(0,95,255,0.05);
+      transition: background 0.4s var(--transition);
+    }
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 2vw;
+      height: 72px;
+    }
+    .falcon-logo {
+      height: 56px;
+      width: auto;
+      transition: transform 0.5s var(--transition);
+      will-change: transform;
+    }
+    .falcon-logo:hover { transform: scale(1.07) rotate(-3deg);}
+    nav ul {
+      list-style: none;
+      display: flex; gap: 2rem;
+      margin: 0; padding: 0;
+    }
+    nav a {
+      color: var(--silver);
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      transition: color 0.2s, border 0.2s;
+      font-size: 1.07rem;
+      border-bottom: 2px solid transparent;
+    }
+    nav a:hover, nav a:focus, nav a.active {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      outline: none;
+    }
+    /* --- Hero Section --- */
+    .hero {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      min-height: 60vh;
+      padding-top: 2rem;
+      background: var(--hero-overlay);
+      position: relative;
+      overflow: hidden;
+      border-bottom-left-radius: var(--radius);
+      border-bottom-right-radius: var(--radius);
+    }
+    .hero-content {
+      max-width: 560px;
+      padding: 2rem 2rem 2rem 1rem;
+      z-index: 3;
+      display: flex; flex-direction: column;
+      justify-content: center;
+      min-width: 320px;
+    }
+    .hero-headline {
+      font-family: var(--font-headline);
+      font-size: 2.9rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 1rem;
+      opacity: 0; transform: translateY(30px) scale(0.96);
+      animation: fadeUpIn 1.15s var(--transition) 0.2s forwards;
+      letter-spacing: 0.11em;
+    }
+    .hero-subheadline {
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--silver);
+      margin-bottom: 2.3rem;
+      opacity: 0; transform: translateY(24px);
+      animation: fadeUpIn 1.25s var(--transition) 0.45s forwards;
+    }
+    .hero-cta {
+      display: inline-block;
+      color: var(--primary-dark);
+      font-weight: 700;
+      background: var(--accent);
+      border: none;
+      border-radius: var(--radius);
+      font-size: 1.13rem;
+      padding: 0.9em 2em;
+      margin-top: 0.8rem;
+      box-shadow: 0 2px 16px 0 rgba(0,224,255,0.12);
+      transition: background 0.24s, box-shadow 0.28s;
+      cursor: pointer;
+      opacity: 0;
+      animation: fadeInScale 1.5s var(--transition) 0.7s forwards;
+    }
+    .hero-cta:hover { background: var(--primary); color: var(--white);}
+    .hero-bg-jet {
+      position: absolute;
+      bottom: -38px; right: 3vw;
+      width: 480px; z-index: 2;
+      opacity: 0.3;
+      /* Optional: SVG or PNG overlay for jet silhouette */
+    }
+    /* --- Keyframes --- */
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.92);}
+      100% { opacity: 1; transform: scale(1);}
+    }
+    @keyframes fadeUpIn {
+      0% { opacity: 0; transform: translateY(30px);}
+      100% { opacity: 1; transform: translateY(0);}
+    }
+
+    /* --- Main Content Grid --- */
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
+    section {
+      background: rgba(1,35,64,0.72);
+      border-radius: var(--radius);
+      box-shadow: 0 4px 24px 0 rgba(0,95,255,0.10);
+      padding: 2.3rem 2rem;
+    }
+
+    /* --- Mission Section --- */
+    .mission-statement {
+      font-family: var(--font-headline);
+      font-size: 2rem;
+      line-height: 1.4;
+      color: var(--accent);
+      font-weight: 800;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.09em;
+      animation: fadeInScale 1.7s var(--transition) 1.3s forwards;
+      opacity: 0;
+    }
+    .mission-body {
+      font-size: 1.2rem;
+      color: var(--silver);
+      font-weight: 400;
+      max-width: 750px;
+      animation: fadeUpIn 1.7s var(--transition) 1.4s forwards;
+      opacity: 0;
+    }
+
+    /* --- Fleet Showcase --- */
+    .fleet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+      gap: 2rem;
+    }
+    .aircraft-card {
+      background: rgba(0,95,255,.10);
+      border-radius: var(--radius);
+      box-shadow: 0 2px 10px rgba(0,224,255,0.11);
+      transition: transform .34s var(--transition), box-shadow .35s;
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: 180px auto 1fr;
+    }
+    .aircraft-card:hover {
+      transform: translateY(-7px) scale(1.03);
+      box-shadow: 0 8px 32px 0 rgba(0,224,255,.20);
+      z-index: 2;
+    }
+    .fleet-img {
+      width: 100%; height: 100%; object-fit: cover;
+      background: linear-gradient(120deg,#005eff22 32%,#00e0ff09 65%);
+      /* Animate on load */
+      opacity: 0; transition: opacity 1s;
+    }
+    .aircraft-card:hover .fleet-img { opacity: 0.82; }
+    .aircraft-info {
+      padding: 1em 1.1em;
+      color: var(--white);
+      display: flex; flex-direction: column;
+      gap: 0.7em;
+      background: none;
+    }
+    .aircraft-title {
+      font-size: 1.19rem;
+      font-family: var(--font-headline);
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .aircraft-specs {
+      color: var(--silver);
+      font-size: 0.98rem;
+      display: flex; flex-wrap: wrap;
+      gap: 1.1em 1.8em;
+    }
+    /* --- Fleet modal overlay (optional for details) --- */
+    .fleet-modal {
+      display: none;
+    }
+    /* --- Routes Map --- */
+    .routes-map-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      align-items: center;
+      justify-content: center;
+    }
+    .routes-svg {
+      width: 90vw; max-width: 640px; height: auto;
+      margin: 0 auto;
+      border-radius: 1em;
+      background: rgba(0,224,255,0.03);
+      box-shadow: 0 2px 10px rgba(0,224,255,0.07);
+      transition: box-shadow 0.2s;
+      /* Animate lines on load with stroke-dasharray in SVG */
+    }
+
+    /* --- Leadership Section --- */
+    .leaders-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+      gap: 2rem;
+      padding-top: 0.5rem;
+    }
+    .leader-card {
+      background: rgba(255,255,255,0.09);
+      border-radius: var(--radius);
+      box-shadow: 0 2px 12px 0 rgba(0,224,255,0.06);
+      padding: 1.4em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform .3s var(--transition);
+    }
+    .leader-card:hover { transform: translateY(-4px) scale(1.04);}
+    .leader-img {
+      width: 88px; height: 88px;
+      border-radius: 48px;
+      border: 3px solid var(--primary);
+      object-fit: cover;
+      margin-bottom: 1rem;
+      background: var(--primary-dark);
+      transition: box-shadow .2s;
+      box-shadow: 0 0 0 rgba(0,224,255,0.03);
+    }
+    .leader-card:hover .leader-img { box-shadow: 0 0 0 4px var(--accent);}
+    .leader-name {
+      font-size: 1.16rem;
+      color: var(--accent);
+      font-family: var(--font-headline);
+      font-weight: 700;
+    }
+    .leader-title {
+      font-size: 0.97rem; color: var(--silver); font-weight: 400;
+      margin-bottom: 0.5em;
+    }
+    .leader-bio {
+      font-size: 0.99rem; color: #dbeafe;
+      font-weight: 300;
+    }
+
+    /* --- Investor Relations --- */
+    .investor-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      align-items: flex-start;
+    }
+    .ir-highlight {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .ir-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(252px, 1fr));
+      gap: 1.5rem;
+    }
+    .ir-card {
+      background: rgba(0,95,255,0.13);
+      border-radius: 0.5em;
+      box-shadow: 0 2px 10px rgba(0,224,255,0.07);
+      padding: 1em;
+      transition: background 0.2s;
+    }
+    .ir-card:hover {
+      background: rgba(0,224,255,0.19);
+    }
+    .ir-key {
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .ir-value {
+      font-size: 1.12rem;
+      color: var(--white);
+    }
+    .ir-link {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .ir-link:hover { color: var(--primary); }
+
+    /* --- Footer --- */
+    footer {
+      background: rgba(1,35,64,0.91);
+      color: var(--silver);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      border-top: 1px solid #1a2232;
+      font-size: 1.01rem;
+    }
+
+    /* --- Responsive Media Queries --- */
+    @media (max-width: 1000px) {
+      .hero { min-height: 48vh;}
+      .hero-headline { font-size: 2.1rem;}
+      .hero-bg-jet { width: 310px; }
+    }
+    @media (max-width: 750px) {
+      .nav-wrap { flex-direction: column; height: auto;}
+      .hero { flex-direction: column; padding: 2rem 1rem;}
+      .hero-content { padding: 1rem;}
+      .hero-bg-jet { display: none;}
+      main { padding: 1rem 0.2rem;}
+      section { padding: 1.2rem 0.7rem;}
+      .routes-svg { width: 98vw;}
+    }
+    @media (max-width: 520px) {
+      .nav-wrap { padding: 0.7rem 1vw;}
+      .hero-headline { font-size: 1.3rem;}
+      .fleet-grid, .leaders-grid, .ir-cards { grid-template-columns: 1fr;}
+      .aircraft-card { grid-template-rows: 140px auto 1fr;}
+      .leader-img { width: 68px; height: 68px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="nav-wrap">
+      <a href="/">
+        <img src="Falcoxn.png" alt="Falconix Air Logo" class="falcon-logo">
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="#mission" class="active">Mission</a></li>
+          <li><a href="#fleet">Fleet</a></li>
+          <li><a href="#routes">Routes</a></li>
+          <li><a href="#leadership">Leadership</a></li>
+          <li><a href="#investor">Investor Relations</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" aria-labelledby="hero-headline">
+    <div class="hero-content">
+      <h1 id="hero-headline" class="hero-headline">Falconix Air</h1>
+      <div class="hero-subheadline">
+        Elevating Charter Aviation: Precision, Innovation, Tomorrow.
+      </div>
+      <a href="#investor" class="hero-cta">Investor Overview</a>
+    </div>
+    <img src="Falcoxn.png" alt="Falconix Air Jet Logo Large" class="hero-bg-jet" loading="lazy">
+  </section>
+
+  <main>
+    <!-- Mission Section -->
+    <section id="mission">
+      <div class="mission-statement">Advancing the Future of Private Air Mobility</div>
+      <p class="mission-body">
+        Falconix Air exists to empower global connection through next-generation aviation. By blending cutting-edge fleet technology, uncompromising safety, and bespoke client experience, we provide on-demand air travel for the leaders of tomorrow. Our commitment to innovation in Part 135 operations sets a new standard for charter—investing in people, technology, and planet for an era where every journey soars beyond expectations.
+      </p>
+    </section>
+
+    <!-- Fleet Showcase -->
+    <section id="fleet">
+      <h2>Our Fleet</h2>
+      <div class="fleet-grid">
+        <div class="aircraft-card">
+          <img src="jet1.png" alt="Falconix X7 UltraJet" class="fleet-img" loading="lazy">
+          <div class="aircraft-info">
+            <div class="aircraft-title">Falconix X7 UltraJet</div>
+            <div class="aircraft-specs">
+              <span>Range: <b>4,100 nm</b></span>
+              <span>Seats: <b>10</b></span>
+              <span>Max Speed: <b>Mach 0.95</b></span>
+            </div>
+          </div>
+        </div>
+        <div class="aircraft-card">
+          <img src="jet2.png" alt="Falconix E-Voyager" class="fleet-img" loading="lazy">
+          <div class="aircraft-info">
+            <div class="aircraft-title">Falconix E-Voyager</div>
+            <div class="aircraft-specs">
+              <span>Range: <b>2,300 nm</b></span>
+              <span>Seats: <b>6</b></span>
+              <span>Hybrid-Electric</span>
+            </div>
+          </div>
+        </div>
+        <div class="aircraft-card">
+          <img src="jet3.png" alt="Falconix XR Turboprop" class="fleet-img" loading="lazy">
+          <div class="aircraft-info">
+            <div class="aircraft-title">Falconix XR Turboprop</div>
+            <div class="aircraft-specs">
+              <span>Range: <b>1,700 nm</b></span>
+              <span>Seats: <b>8</b></span>
+              <span>Cruise: <b>360 ktas</b></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Routes Map -->
+    <section id="routes">
+      <h2>Route Network</h2>
+      <div class="routes-map-wrap">
+        <svg class="routes-svg" viewBox="0 0 640 320" role="img" aria-label="Map of Falconix Air Routes" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="640" height="320" fill="#0C1424" rx="28" />
+          <g>
+            <!-- Hubs -->
+            <circle cx="180" cy="160" r="13" fill="#00e0ff" />
+            <text x="210" y="168" font-size="1.1em" fill="#fff">NYC</text>
+            <circle cx="330" cy="80" r="11" fill="#005eff" />
+            <text x="355" y="88" font-size="1.04em" fill="#fff">Chicago</text>
+            <circle cx="540" cy="185" r="12" fill="#0ff" />
+            <text x="570" y="193" font-size="1.08em" fill="#fff">Miami</text>
+            <circle cx="410" cy="230" r="10" fill="#00e0ff" />
+            <text x="435" y="240" font-size="1em" fill="#fff">Dallas</text>
+            <circle cx="65" cy="70" r="9" fill="#00e0ff" />
+            <text x="70" y="90" font-size="1em" fill="#fff">LA</text>
+            <!-- Animated Routes -->
+            <path d="M180 160 Q 320 60 540 185" stroke="#00e0ff" stroke-width="3.5" fill="none">
+              <animate attributeName="stroke-dasharray" from="0,1000" to="180,1000" dur="2s" repeatCount="indefinite"/>
+            </path>
+            <path d="M180 160 Q 270 120 330 80" stroke="#0090ff" stroke-width="2.3" fill="none">
+              <animate attributeName="stroke-dasharray" from="0,1000" to="120,1000" dur="1.2s" repeatCount="indefinite"/>
+            </path>
+            <path d="M330 80 Q 320 200 410 230" stroke="#005eff" stroke-width="2" fill="none">
+              <animate attributeName="stroke-dasharray" from="0,1000" to="90,1000" dur="1.7s" repeatCount="indefinite"/>
+            </path>
+            <path d="M540 185 Q 380 120 65 70" stroke="#00e0ff" stroke-width="2.2" fill="none">
+              <animate attributeName="stroke-dasharray" from="0,1000" to="340,1000" dur="1.95s" repeatCount="indefinite"/>
+            </path>
+          </g>
+        </svg>
+        <p class="routes-caption" style="color:#dbeafe;">
+          <b>Falconix Air</b> links key North American business and leisure destinations—always direct, always on your schedule.
+        </p>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section id="leadership">
+      <h2>Leadership</h2>
+      <div class="leaders-grid">
+        <div class="leader-card">
+          <img src="ceo.png" alt="CEO: Alex Falcon" class="leader-img" loading="lazy">
+          <div class="leader-name">Alex Falcon</div>
+          <div class="leader-title">Chief Executive Officer</div>
+          <div class="leader-bio">
+            Aviation innovator, ex-SpaceSystems CEO. Leads Falconix’s vision for sustainable, dynamic charter flight.
+          </div>
+        </div>
+        <div class="leader-card">
+          <img src="coo.png" alt="COO: Tania Nguyen" class="leader-img" loading="lazy">
+          <div class="leader-name">Tania Nguyen</div>
+          <div class="leader-title">Chief Operating Officer</div>
+          <div class="leader-bio">
+            Former Delta VP of Flight Ops. Champions safety, precision, and service excellence for every journey.
+          </div>
+        </div>
+        <div class="leader-card">
+          <img src="cfo.png" alt="CFO: Mark Rojas" class="leader-img" loading="lazy">
+          <div class="leader-name">Mark Rojas</div>
+          <div class="leader-title">Chief Financial Officer</div>
+          <div class="leader-bio">
+            Ex-Goldman Sachs aviation lead. Navigates Falconix’s growth with disciplined capital strategy.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investor Relations -->
+    <section id="investor">
+      <h2>Investor Relations</h2>
+      <div class="investor-wrap">
+        <div class="ir-highlight">Why Invest in Falconix Air?</div>
+        <div>
+          Falconix Air is redefining jet charter with hyper-modern fleet, AI-driven route planning, and robust demand pipelines. Backed by a team with global operational pedigree, we combine aviation tradition and tech-first agility. Regulatory path to Part 135 fully underway; series A terms available with priority allocation for founding investors.
+        </div>
+        <div class="ir-cards">
+          <div class="ir-card">
+            <div class="ir-key">Projected Launch</div>
+            <div class="ir-value">Q2 2035</div>
+          </div>
+          <div class="ir-card">
+            <div class="ir-key">Phase I Fleet Order</div>
+            <div class="ir-value">8 Aircraft (Jet/Electric Hybrid)</div>
+          </div>
+          <div class="ir-card">
+            <div class="ir-key">Phase II Expansion</div>
+            <div class="ir-value">24 U.S. city pairs by 2037</div>
+          </div>
+          <div class="ir-card">
+            <div class="ir-key">Regulatory Status</div>
+            <div class="ir-value">FAA Part 135 Certification — in progress</div>
+          </div>
+        </div>
+        <p style="margin-top:1em;">
+          <a href="Falconix-Investor-Overview.pdf" class="ir-link" target="_blank">Download Investor Presentation (PDF)</a>
+          <span style="margin-left:2em;"><a href="mailto:ir@falconixair.com" class="ir-link">Contact Investor Relations</a></span>
+        </p>
+        <p style="color:#a4b3c3; font-size:0.98em;">
+          For filings, recent news, and upcoming virtual roadshows, bookmark this page or <a href="mailto:ir@falconixair.com?subject=Subscribe IR Updates" class="ir-link">subscribe for updates</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2035 Falconix Air. All Rights Reserved. | <a href="#investor" class="ir-link">Investor Portal</a>
+  </footer>
+</body>
+</html>
