@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Falconix Air Fleet</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f7fa;
+      color: #333;
+    }
+
+    nav {
+      background-color: #004080;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin-left: 20px;
+      padding: 8px 16px;
+      background-color: #ffffff;
+      color: #004080;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #e0e6ed;
+    }
+
+    .fleet-section {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .fleet-section h1 {
+      font-size: 2.5em;
+      color: #004080;
+      margin-bottom: 20px;
+    }
+
+    .fleet-description {
+      font-size: 1.2em;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+
+    .fleet-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .fleet-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: 320px;
+      transition: transform 0.3s ease;
+    }
+
+    .fleet-card:hover {
+      transform: scale(1.03);
+    }
+
+    .fleet-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .fleet-card h2 {
+      margin: 15px;
+      font-size: 1.3em;
+      color: #004080;
+    }
+
+    .fleet-card p {
+      margin: 0 15px 20px;
+      font-size: 1em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div>Falconix Air</div>
+    <a href="index.html">Home</a>
+  </nav>
+
+  <section class="fleet-section">
+    <h1>Our Future Fleet</h1>
+    <p class="fleet-description">
+      Falconix Air will operate a fleet of Cessna Citation CJ4 jets—sleek, efficient, and built for luxury charter travel. These aircraft offer the perfect balance of speed, comfort, and range for regional prestige routes.
+    </p>
+
+    <div class="fleet-gallery">
+      <div class="fleet-card">
+        <img src="plane.jpg" alt="CJ4 Exterior" />
+        <h2>Citation CJ4 – Exterior</h2>
+        <p>Streamlined design, rear-mounted engines, and Falconix livery in development.</p>
+      </div>
+
+      <div class="fleet-card">
+        <img src="plane2.jpg" alt="CJ4 In Flight" />
+        <h2>Citation CJ4 – In Flight</h2>
+        <p>High-performance cruising over tropical and regional routes with elite comfort.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
