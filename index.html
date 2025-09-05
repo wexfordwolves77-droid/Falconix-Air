@@ -20,29 +20,6 @@
       box-sizing: border-box;
     }
     
-<div id="loading-screen">
-  <img src="falconix-logo.png" alt="Falconix Logo" id="loading-logo" />
-</div>
-
-<script>
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      document.getElementById('loading-screen').style.display = 'none';
-    }, 4000); // Adjust timing as needed
-  });
-</script>
-
-<script>
-  document.addEventListener('mousemove', e => {
-    const trail = document.createElement('div');
-    trail.className = 'trail';
-    trail.style.left = `${e.pageX}px`;
-    trail.style.top = `${e.pageY}px`;
-    document.body.appendChild(trail);
-    setTimeout(() => trail.remove(), 800);
-  });
-</script>
-
     body {
       font-family: var(--font);
       background-color: var(--bg);
