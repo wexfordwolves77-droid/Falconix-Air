@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Falconix Air Destinations</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f7fa;
+      color: #333;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background-color: #e0e6ed;
+    }
+    .filter-bar button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #004080;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .filter-bar button:hover {
+      background-color: #003060;
+    }
+    .map-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 30px;
+      gap: 20px;
+    }
+    .airport-card {
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      width: 280px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .airport-card:hover {
+      transform: scale(1.03);
+    }
+    .airport-code {
+      font-size: 20px;
+      font-weight: bold;
+      color: #004080;
+    }
+    .airport-name {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+    .airport-location {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Falconix Air Destinations</h1>
+    <p>Explore our network of major hubs, regional airports, and prestige locations</p>
+  </header>
+
+  <div class="filter-bar">
+    <button onclick="filterAirports('all')">All</button>
+    <button onclick="filterAirports('hub')">Major Hubs</button>
+    <button onclick="filterAirports('local')">Local Airports</button>
+    <button onclick="filterAirports('prestige')">Prestige</button>
+  </div>
+
+  <div class="map-container" id="airportList">
+    <!-- Airport cards will be injected here -->
+  </div>
+
+  <script>
+    const airports = [
+      { code: "KPIT", name: "Pittsburgh International Airport", location: "Pittsburgh, PA", type: "hub" },
+      { code: "KORD", name: "Chicago O’Hare International Airport", location: "Chicago, IL", type: "hub" },
+      { code: "KCLT", name: "Charlotte Douglas International", location: "Charlotte, NC", type: "hub" },
+      { code: "KATL", name: "Hartsfield-Jackson Atlanta Intl", location: "Atlanta, GA", type: "hub" },
+      { code: "KBOS", name: "Boston Logan International", location: "Boston, MA", type: "hub" },
+      { code: "KAGC", name: "Allegheny County Airport", location: "West Mifflin, PA", type: "local" },
+      { code: "KJST", name: "Johnstown–Cambria County Airport", location: "Johnstown, PA", type: "local" },
+      { code: "KMGW", name: "Morgantown Municipal Airport", location: "Morgantown, WV", type: "local" },
+      { code: "KLBE", name: "Arnold Palmer Regional Airport", location: "Latrobe, PA", type: "local" },
+      { code: "KERI", name: "Erie International Airport", location: "Erie, PA", type: "local" },
+      { code: "KZZV", name: "Zanesville Municipal Airport", location: "Zanesville, OH", type: "local" },
+      { code: "KDUJ", name: "DuBois Regional Airport", location: "DuBois, PA", type: "local" },
+      { code: "KPKB", name: "Mid-Ohio Valley Regional Airport", location: "Parkersburg, WV", type: "local" },
+      { code: "KHTS", name: "Huntington Tri-State Airport", location: "Huntington, WV", type: "local" },
+      { code: "KFLL", name: "Fort Lauderdale-Hollywood Intl", location: "Fort Lauderdale, FL", type: "prestige" },
+      { code: "KSRQ", name: "Sarasota-Bradenton Intl", location: "Sarasota, FL", type: "prestige" },
+      { code: "KEYW", name: "Key West International Airport", location: "Key West, FL", type: "prestige" },
+      { code: "KAPF", name: "Naples Municipal Airport", location: "Naples, FL", type: "prestige" }
+    ];
+
+    function renderAirports(list) {
+      const container = document.getElementById("airportList");
+      container.innerHTML = "";
+      list.forEach(airport => {
+        const card = document.createElement("div");
+        card.className = "airport-card";
+        card.innerHTML = `
+          <div class="airport-code">${airport.code}</div>
+          <div class="airport-name">${airport.name}</div>
+          <div class="airport-location">${airport.location}</div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function filterAirports(type) {
+      if (type === "all") {
+        renderAirports(airports);
+      } else {
+        const filtered = airports.filter(a => a.type === type);
+        renderAirports(filtered);
+      }
+    }
+
+    // Initial render
+    renderAirports(airports);
+  </script>
+
+</body>
+</html>
