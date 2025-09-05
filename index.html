@@ -19,6 +19,18 @@
       padding: 0;
       box-sizing: border-box;
     }
+    
+<div id="loading-screen">
+  <img src="falconix-logo.png" alt="Falconix Logo" id="loading-logo" />
+</div>
+
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('loading-screen').style.display = 'none';
+    }, 4000); // Adjust timing as needed
+  });
+</script>
 
     body {
       font-family: var(--font);
