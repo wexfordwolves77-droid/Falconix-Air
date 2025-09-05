@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Falconix Air | Charter Redefined</title>
+  <style>
+    :root {
+      --primary: #002b45;
+      --accent: #00c2ff;
+      --text: #f4f4f4;
+      --bg: #0a0a0a;
+      --card: #1a1a1a;
+      --font: 'Segoe UI', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--primary);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .logo {
+      height: 60px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    #hero {
+      background: linear-gradient(to right, #002b45, #003d5c);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero-logo {
+      height: 100px;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 3rem 2rem;
+      border-bottom: 1px solid #222;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    .fleet-grid, .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .plane-card, .team-card {
+      background-color: var(--card);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .plane-card:hover, .team-card:hover {
+      transform: translateY(-5px);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--accent);
+      color: var(--bg);
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #00e0ff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--primary);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <img src="falconix.png" alt="Falconix Air Logo" class="logo" />
+    <nav role="navigation">
+      <ul>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#fleet">Fleet</a></li>
+        <li><a href="#routes">Routes</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#investors">Investors</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" role="region" aria-label="Hero Section">
+    <img src="falconix.png" alt="Falconix Logo" class="hero-logo" />
+    <h1>Falconix Air</h1>
+    <p>Precision Charter. Smart Dispatch. Launching 2035.</p>
+  </section>
+
+  <section id="mission">
+    <h2>Our Mission</h2>
+    <p>Falconix Air is a next-generation Part 135 charter airline focused on short-haul, low-passenger flights. We combine cutting-edge aircraft with AI-enhanced dispatch to deliver fast, flexible, and sustainable regional travel.</p>
+  </section>
+
+  <section id="fleet">
+    <h2>Fleet Overview</h2>
+    <div class="fleet-grid">
+      <div class="plane-card">
+        <h3>Falcon Lite</h3>
+        <p>6-passenger turboprop. Ideal for regional hops under 500 miles.</p>
+      </div>
+      <div class="plane-card">
+        <h3>Falcon Eco</h3>
+        <p>Electric hybrid, 4-passenger. Zero-emission short-range flights.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="routes">
+    <h2>Charter Routes</h2>
+    <ul>
+      <li>Pittsburgh → NYC (1h 20m)</li>
+      <li>Chicago → Detroit (1h)</li>
+      <li>Miami → Tampa (55m)</li>
+      <li>Atlanta → Charlotte (1h 10m)</li>
+    </ul>
+  </section>
+
+  <section id="leadership">
+    <h2>Leadership</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <h3>Luke Schmidt</h3>
+        <p>Chief Executive Officer<br>Student at Shady Side Academy</p>
+      </div>
+      <div class="team-card">
+        <h3>Bryce Pflugh</h3>
+        <p>Chief Operating Officer<br>Student at Pine-Richland High School</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="investors">
+    <h2>Investor Relations</h2>
+    <p>Falconix Air is preparing for a 2035 launch. We're seeking strategic partners to help scale our fleet, expand our route network, and deploy smart dispatch systems.</p>
+    <a href="#" class="cta-button">View Investment Deck</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Falconix Air. All rights reserved.</p>
+  </footer>
+</body>
+</html>
