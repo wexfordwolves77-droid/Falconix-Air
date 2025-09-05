@@ -1,6 +1,6 @@
 # ✈️ Our Fleet: Piper Navajo Chieftain
 
-![Falconix Air Logo](assets/logo-falconix.png)
+![Falconix Air Logo](falconix.png)
 
 ![Piper Navajo Chieftain](https://www.aircharterserviceusa.com/aircraft-guide/private/piper-usa/piperpa-31navajochieftain)
 
