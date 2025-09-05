@@ -2,6 +2,8 @@
 
 Welcome to **Falconix Air**, the next generation of high-tech aviation.
 
+![Falconix Air Logo](falconix.png)
+
 ---
 
 ## 🚀 Launch Timeline
@@ -10,7 +12,7 @@ We plan to take flight in **2035** — bringing innovation, speed, and precision
 
 ---
 
-## 🧑‍✈️ Leadership Team
+## 🌟 Leadership Team
 
 - **Luke Schmidt** — Chief Executive Officer  
 - **Bryce Pflugh** — Chief Operating Officer
