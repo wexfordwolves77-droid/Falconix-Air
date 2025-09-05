@@ -38,7 +38,7 @@ Website updates, branding, and route previews coming soon.
   </button>
 </a>
 
-<a href="investment.md">
+<a href="invest.md">
   <button style="padding:10px 20px; background-color:#0055ff; color:white; border:none; border-radius:5px; cursor:pointer;">
     💼 View Investment Opportunities
   </button>
