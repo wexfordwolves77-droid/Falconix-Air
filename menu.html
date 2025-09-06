@@ -1,3 +1,79 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Falconix Air Menu</title>
+  <style>
+  /* ===== Falconix Air Menu Styling ===== */
+#menu {
+  background: linear-gradient(135deg, #004080, #0074d9); /* Falconix deep blue to sky blue */
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Main Heading */
+#menu h2 {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffd700; /* Prestige gold */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* Category Headings */
+.menu-category h3 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #ffdd88; /* Soft gold */
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 5px;
+}
+
+/* Menu Lists */
+.menu-category ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu-category li {
+  font-size: 1.1em;
+  margin: 10px 0;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #ffd700;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+.menu-category li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(4px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #menu {
+    padding: 20px;
+  }
+
+  #menu h2 {
+    font-size: 2em;
+  }
+
+  .menu-category h3 {
+    font-size: 1.3em;
+  }
+
+  .menu-category li {
+    font-size: 1em;
+  }
+}
+
+  </style>
+</head>
+
 <section id="menu">
   <h2>🍴 Falconix Prestige Menu</h2>
   
